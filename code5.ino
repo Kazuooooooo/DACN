@@ -95,7 +95,7 @@ void DHT11sensor() {
 
 void soilMoistureSensor() {
     int value = analogRead(soil);
-    value = 100 - map(value, 0, 1024, 0, 100);
+    value = 100 - map(value, 0, 1023, 0, 100);
 
     Blynk.virtualWrite(V3, value);
     lcd.setCursor(11, 1);
